@@ -1,4 +1,4 @@
-package com.ihediohachinedu.mynewsapp
+package com.ihediohachinedu.mynewsapp.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
