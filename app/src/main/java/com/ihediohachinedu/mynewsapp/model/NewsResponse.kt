@@ -1,4 +1,6 @@
-package com.ihediohachinedu.mynewsapp
+package com.ihediohachinedu.mynewsapp.model
+
+import com.ihediohachinedu.mynewsapp.model.Article
 
 data class NewsResponse(
     val articles: List<Article>,
