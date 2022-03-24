@@ -1,4 +1,4 @@
-package com.ihediohachinedu.mynewsapp
+package com.ihediohachinedu.mynewsapp.model
 
 data class Source(
     val id: Any,
