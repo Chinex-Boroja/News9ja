@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ihediohachinedu.mynewsapp.R
 import com.ihediohachinedu.mynewsapp.adapters.NewsAdapter
@@ -12,7 +13,6 @@ import com.ihediohachinedu.mynewsapp.ui.NewsActivity
 import com.ihediohachinedu.mynewsapp.ui.NewsViewModel
 import com.ihediohachinedu.mynewsapp.utils.Resource
 import kotlinx.android.synthetic.main.breaking_news_frag.*
-import kotlinx.android.synthetic.main.search_news_frag.*
 import kotlinx.android.synthetic.main.search_news_frag.paginationProgressBar
 
 class BreakingNewsFragment : Fragment(R.layout.breaking_news_frag) {
@@ -21,6 +21,22 @@ class BreakingNewsFragment : Fragment(R.layout.breaking_news_frag) {
     lateinit var newsAdapter: NewsAdapter
 
     val TAG = "BreakingNewsFragment"
+    private fun setupRecyclerView() {
+        newsAdapter = NewsAdapter()
+        rvBreakingNews.apply {
+            adapter = newsAdapter
+            layoutManager = LinearLayoutManager(activity)
+        }
+        newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("article", it)
+            }
+            findNavController().navigate(
+                R.id.action_breakingNewsFragment_to_articleFragment,
+                bundle
+            )
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -47,6 +63,7 @@ class BreakingNewsFragment : Fragment(R.layout.breaking_news_frag) {
                 }
             }
         })
+        return
 
     }
     private fun hideProgressBar() {
@@ -54,12 +71,5 @@ class BreakingNewsFragment : Fragment(R.layout.breaking_news_frag) {
     }
     private fun showProgressBar() {
         paginationProgressBar.visibility = View.VISIBLE
-    }
-    private fun setupRecyclerView() {
-        newsAdapter = NewsAdapter()
-        rvBreakingNews.apply {
-            adapter = newsAdapter
-            layoutManager = LinearLayoutManager(activity)
-        }
     }
 }
