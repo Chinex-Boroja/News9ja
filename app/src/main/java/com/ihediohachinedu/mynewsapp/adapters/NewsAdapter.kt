@@ -9,9 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ihediohachinedu.mynewsapp.R
 import com.ihediohachinedu.mynewsapp.model.Article
+import com.ihediohachinedu.mynewsapp.ui.fragments.BreakingNewsFragment
+import com.ihediohachinedu.mynewsapp.ui.fragments.SavedNewsFragment
+import com.ihediohachinedu.mynewsapp.ui.fragments.SearchNewsFragment
 import kotlinx.android.synthetic.main.preview_article_item.view.*
 
-class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
+class NewsAdapter() : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
 
     inner class ArticleViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
@@ -40,7 +43,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
         val article = differ.currentList[position]
         holder.itemView.apply {
             Glide.with(this).load(article.urlToImage).into(ivArticleImage)
-            tvSource.text = article.source.name
+            tvSource.text = article.source?.name
             tvTitle.text = article.title
             tvDescription.text = article.description
             tvPublishedAt.text = article.publishedAt
