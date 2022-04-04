@@ -2,6 +2,8 @@ package com.ihediohachinedu.mynewsapp.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 @Entity(
@@ -10,12 +12,20 @@ import androidx.room.PrimaryKey
 data class Article(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
-    val author: String,
-    val content: String,
-    val description: String,
-    val publishedAt: String,
-    val source: Source,
-    val title: String,
-    val url: String,
-    val urlToImage: String
-)
+    @SerializedName("author")
+    var author: String?,
+    @SerializedName("content")
+    var content: String?,
+    @SerializedName("description")
+    var description: String?,
+    @SerializedName("publishedAt")
+    var publishedAt: String?,
+    @SerializedName("source")
+    var source: Source?,
+    @SerializedName("title")
+    var title: String?,
+    @SerializedName("url")
+    var url: String?,
+    @SerializedName("urlToImage")
+    var urlToImage: String?,
+) : Serializable
