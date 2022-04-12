@@ -25,15 +25,7 @@ News9ja is an app which brings the latest news from Google news. Internally app 
 
 ## Steps to build the app
 - Create your API key at [News API](https://newsapi.org/)
-- Add the generated API key in `app/build.gradle` like below  
-`buildConfigField "String", "NEWS_API_KEY", '"YOUR_NEWS_API_KEY"'`
+- Add the generated API key in `~/utils/Constants.kt` like below  
+`const val API_KEY = ""`
 - Build and run the app.
 
-## TODO
-- Write test cases for all the modules.  
-    - ~~Domain module~~
-    - ~~Remote module~~
-    - Cache module
-    - Data module
-    - Presentation Module
-    - App module
