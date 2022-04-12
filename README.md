@@ -21,7 +21,9 @@ News9ja is an app which brings the latest news from Google news. Internally app 
 ![Architecture](https://github.com/Naveentp/Clean-MVVM-NewsApp/blob/master/ART/clean_mvvm.jpeg)
 
 ## Screenshots
-<img alt="NewsApp" height="450px" src="https://github.com/Naveentp/Clean-MVVM-NewsApp/blob/master/ART/Screenshot-1.png" />
+<img alt="NewsApp" height="450px" src="https://github.com/Chinex-Boroja/News9ja/blob/main/app/src/main/res/drawable/scbreaking.jpg"/>
+<img alt="NewsApp" height="450px" src="https://github.com/Chinex-Boroja/News9ja/blob/main/app/src/main/res/drawable/scsearch.jpg"/>
+<img alt="NewsApp" height="450px" src="https://github.com/Chinex-Boroja/News9ja/blob/main/app/src/main/res/drawable/scwebview.jpg"/>
 
 ## Steps to build the app
 - Create your API key at [News API](https://newsapi.org/)
