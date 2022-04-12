@@ -16,6 +16,6 @@
     <item android:id="@+id/searchNewsFragment"
         android:title="Search News"
         android:enabled="true"
-        android:icon="@drawable/ic_all_news"/>
+        android:icon="@drawable/ic_search"/>
 
 </menu>
