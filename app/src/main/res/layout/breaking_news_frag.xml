@@ -15,7 +15,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:overScrollMode="never" />
+
+<!--    <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--        android:id="@+id/shimmerFrag"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:visibility="visible">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:backgroundTint="@color/background">-->
+
+<!--            <include layout="@layout/preview_article_item"-->
+<!--                android:background="@color/background"/>-->
+<!--            <include layout="@layout/preview_article_item"-->
+<!--                android:background="@color/background"/>-->
+<!--            <include layout="@layout/preview_article_item"-->
+<!--                android:background="@color/background"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </com.facebook.shimmer.ShimmerFrameLayout>-->
 
     <ProgressBar
         android:id="@+id/paginationProgressBar"
